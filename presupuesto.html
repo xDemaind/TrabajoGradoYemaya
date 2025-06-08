@@ -47,22 +47,22 @@
             <div class="form-grid">
               <div class="form-group">
                 <label for="nombre">Nombre<span class="required">*</span></label>
-                <input type="text" id="nombre" name="nombre" maxlength="15" placeholder="Tu nombre" required />
+                <input type="text" id="nombre" name="nombre" maxlength="15" placeholder="Tu nombre" required>
                 <small class="error-msg" id="error-nombre"></small>
               </div>
               <div class="form-group">
                 <label for="apellidos">Apellidos<span class="required">*</span></label>
-                <input type="text" id="apellidos" name="apellidos" maxlength="40" placeholder="Tus apellidos" required />
+                <input type="text" id="apellidos" name="apellidos" maxlength="40" placeholder="Tus apellidos" required>
                 <small class="error-msg" id="error-apellidos"></small>
               </div>
               <div class="form-group">
                 <label for="telefono">Teléfono<span class="required">*</span></label>
-                <input type="tel" id="telefono" name="telefono" pattern="\d{1,9}" maxlength="9" placeholder="600123456" required />
+                <input type="tel" id="telefono" name="telefono" pattern="\d{1,9}" maxlength="9" placeholder="600123456" required>
                 <small class="error-msg" id="error-telefono"></small>
               </div>
               <div class="form-group">
                 <label for="email">Correo electrónico<span class="required">*</span></label>
-                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required />
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required>
                 <small class="error-msg" id="error-email"></small>
               </div>
             </div>
@@ -76,9 +76,9 @@
               <div class="form-group full-width">
                 <label>Tipo de clase<span class="required">*</span></label>
                 <div class="radio-group">
-                  <label><input type="radio" name="producto" value="particular" data-precio="100" required /> Clase particular (€100)</label>
-                  <label><input type="radio" name="producto" value="grupo-pequeno" data-precio="60" /> Clase en grupo pequeño (6 pers máx) (€60)</label>
-                  <label><input type="radio" name="producto" value="grupo-grande" data-precio="30" /> Clase en grupo grande (12 pers máx) (€30)</label>
+                  <label><input type="radio" name="producto" value="particular" data-precio="100" required> Clase particular (€100)</label>
+                  <label><input type="radio" name="producto" value="grupo-pequeno" data-precio="60"> Clase en grupo pequeño (6 pers máx) (€60)</label>
+                  <label><input type="radio" name="producto" value="grupo-grande" data-precio="30"> Clase en grupo grande (12 pers máx) (€30)</label>
                 </div>
                 <small class="error-msg" id="error-producto"></small>
               </div>
@@ -87,7 +87,7 @@
               <div class="form-group">
                 <label for="plazo">Duración<span class="required">*</span></label>
                 <div style="display:flex; gap:10px; align-items:center;">
-                  <input type="number" id="plazo" name="plazo" min="1" placeholder="Ej. 5" required style="flex:1;" />
+                  <input type="number" id="plazo" name="plazo" min="1" placeholder="Ej. 5" required style="flex:1;">
                   <select id="unidad-plazo" name="unidad-plazo" required>
                     <option value="" disabled selected>Unid.</option>
                     <option value="dias">Días</option>
@@ -101,9 +101,9 @@
               <div class="form-group full-width">
                 <label>Extras (cada uno añade coste)</label>
                 <div class="checkbox-group">
-                  <label><input type="checkbox" name="extras" value="tabla-neopreno" data-precio="25" /> Alquiler tabla + neopreno (€25)</label>
-                  <label><input type="checkbox" name="extras" value="tabla" data-precio="20" /> Alquiler tabla (€20)</label>
-                  <label><input type="checkbox" name="extras" value="neopreno" data-precio="10" /> Alquiler neopreno (€10)</label>
+                  <label><input type="checkbox" name="extras" value="tabla-neopreno" data-precio="25"> Alquiler tabla + neopreno (€25)</label>
+                  <label><input type="checkbox" name="extras" value="tabla" data-precio="20"> Alquiler tabla (€20)</label>
+                  <label><input type="checkbox" name="extras" value="neopreno" data-precio="10"> Alquiler neopreno (€10)</label>
                 </div>
                 <small class="error-msg" id="error-extras"></small>
               </div>
@@ -111,7 +111,7 @@
               <!-- RESULTADO -->
               <div class="form-group full-width">
                 <label for="presupuesto-final">Precio estimado</label>
-                <input type="text" id="presupuesto-final" name="presupuesto-final" readonly placeholder="€0.00" />
+                <input type="text" id="presupuesto-final" name="presupuesto-final" readonly placeholder="€0.00">
                 <small class="info-msg">— Se actualiza automáticamente.</small>
                 <small class="info-msg" id="descuento-info">Descuento aplicado: 0% (-€0.00)</small>
               </div>
@@ -119,7 +119,7 @@
               <!-- CONDICIONES -->
               <div class="form-group full-width">
                 <label class="condiciones-label">
-                  <input type="checkbox" id="condiciones" name="condiciones" required /> He leído y acepto las <a href="terminos.html" target="_blank">Condiciones de Privacidad</a><span class="required">*</span>
+                  <input type="checkbox" id="condiciones" name="condiciones" required> He leído y acepto las <a href="terminos.html" target="_blank">Condiciones de Privacidad</a><span class="required">*</span>
                 </label>
                 <small class="error-msg" id="error-condiciones"></small>
               </div>
