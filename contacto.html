@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto – Yemayá Surf</title>
+
+  <!-- Google Font Quicksand -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos compartidos (header, footer, variables, reset, tipografía) -->
+  <link rel="stylesheet" href="assets/css/shared.css">
+
+  <!-- Estilos específicos de contacto -->
+  <link rel="stylesheet" href="assets/css/contacto.css">
+</head>
+<body>
+  <!-- HEADER (idéntico al resto de páginas) -->
+  <header class="fixed-header">
+    <img src="assets/img/SurfLogo.png" alt="Logo Yemayá" class="logo__header">
+    <h2 class="titulo__header"><strong>YEMAYÁ</strong></h2>
+    <nav>
+      <ul>
+        <li class="header-item"><a href="index.html">Inicio</a></li>
+        <li class="header-item"><a href="galeria.html">Galería</a></li>
+        <li class="header-item"><a href="clases.html">Clases</a></li>
+        <li class="header-item"><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section id="contacto-seccion">
+      <div class="container">
+        <h1 class="titulo">Contáctanos</h1>
+        <p class="subtitulo">
+          ¿Tienes dudas o quieres más información? Completa el formulario o visítanos en nuestra ubicación. 
+        </p>
+
+        <!-- Datos de contacto y ubicación -->
+        <div class="info-ubicacion">
+          <div class="datos-contacto">
+            <h2>Datos de la empresa</h2>
+            <p><strong>Dirección:</strong> SURF EL PALMAR, 11156, EL PALMAR DE VEJER, CÁDIZ, ESPAÑA</p>
+            <p><strong>Teléfono:</strong> +34 628 59 76 99</p>
+            <p><strong>Email:</strong> info@yemaya.es</p>
+          </div>
+          <div id="mapa"></div>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <form id="form-contacto" action="#" method="POST" novalidate>
+          <div class="form-grid">
+            <!-- Nombre -->
+            <div class="form-group">
+              <label for="nombre">Nombre completo<span class="required">*</span></label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+                maxlength="50"
+                required
+                >
+              <small class="error-msg" id="error-nombre"></small>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">Correo electrónico<span class="required">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ejemplo@dominio.com"
+                required
+                >
+              <small class="error-msg" id="error-email"></small>
+            </div>
+
+            <!-- Asunto -->
+            <div class="form-group full-width">
+              <label for="asunto">Asunto<span class="required">*</span></label>
+              <input
+                type="text"
+                id="asunto"
+                name="asunto"
+                placeholder="Tema de tu mensaje"
+                maxlength="100"
+                required
+                >
+              <small class="error-msg" id="error-asunto"></small>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-group full-width">
+              <label for="mensaje">Mensaje<span class="required">*</span></label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                placeholder="Escribe tu mensaje..."
+                maxlength="500"
+                required
+              ></textarea>
+              <small class="error-msg" id="error-mensaje"></small>
+            </div>
+          </div>
+
+          <!-- Botón de envío -->
+          <div class="submit-wrapper">
+            <button type="submit" class="btn-enviar">Enviar mensaje</button>
+            <button type="reset" class="btn-reset">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (idéntico al resto de páginas) -->
+  <footer class="footer">
+    <div class="footer__contenido">
+      <div class="footer__logo">
+        <h3>Yemayá</h3>
+        <p>Escuela de Surf desde 1998</p>
+      </div>
+
+      <div class="footer__info">
+        <p><strong>Dirección:</strong> SURF EL PALMAR, 11156, EL PALMAR DE VEJER, CÁDIZ, ESPAÑA</p>
+        <p><strong>Email:</strong> info@yemaya.es</p>
+        <p><strong>Teléfono:</strong> +34 628 59 76 99</p>
+      </div>
+
+      <div class="footer__redes">
+        <a href="https://www.facebook.com" target="_blank"><img src="assets/img/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="assets/img/x.png" alt="Twitter"></a>
+      </div>
+    </div>
+
+    <div class="footer__legal">
+      <p>&copy; 2025 Yemayá Surf. Todos los derechos reservados. | <a href="aviso-legal.html" target="_blank">Aviso legal</a></p>
+    </div>
+  </footer>
+
+  <!-- 1) Cargamos primero nuestro JS para definir iniciarMapa en global -->
+  <script src="assets/js/contacto.js"></script>
+  <!-- 2) Después cargamos la API de Google Maps, con callback a iniciarMapa -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfZ4FWmeacX4-Q2StULWw6FqheV_IPYho&callback=iniciarMapa"
+    async
+    defer
+  ></script>
+</body>
+</html>

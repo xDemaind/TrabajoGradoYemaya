@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yemayá - Escuela de Surf</title>
+
+  <!-- Google Font Quicksand -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" 
+    rel="stylesheet">
+
+  <!-- Estilos compartidos (header, footer, variables, reset, tipografía) -->
+  <link rel="stylesheet" href="assets/css/shared.css">
+
+  <!-- Estilos específicos de index.html (secciones principales, noticias, redireccionamiento, etc.) -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- AOS (animaciones) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Swiper CSS (para el carrusel “¿Quiénes Somos?”) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+</head>
+<body>
+  <!-- HEADER (idéntico al resto de páginas) -->
+  <header class="fixed-header">
+    <img src="assets/img/SurfLogo.png" alt="Logo Yemayá" class="logo__header">
+    <h2 class="titulo__header"><strong>YEMAYÁ</strong></h2>
+    <nav>
+      <ul>
+        <li class="header-item"><a href="#" class="activo">Inicio</a></li>
+        <li class="header-item"><a href="galeria.html">Galería</a></li>
+        <li class="header-item"><a href="clases.html">Clases</a></li>
+        <li class="header-item"><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <section class="main">
+    <div class="main__overlay">
+      <div class="main__content" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="main__title">Descubre la emoción del surf</h1>
+        <p class="main__subtitle">
+          Aprende con los mejores desde 1998. Clases para todos los niveles en la Playa del Palmar.
+        </p>
+        <a href="clases.html" class="main__cta">Empieza hoy</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section id="queSomos" class="queSomos">
+    <h2 class="titulo__queSomos">¿Quiénes Somos?</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="queSomos__card">
+            <img src="assets/img/slide1.jpg" alt="Instructor 1">
+            <div class="queSomos__text">
+              <h3>Pasión por el mar</h3>
+              <p>Llevamos desde 1998 viviendo el surf y transmitiendo nuestra pasión a miles de alumnos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="queSomos__card">
+            <img src="assets/img/slide2.jpg" alt="Clases en grupo">
+            <div class="queSomos__text">
+              <h3>Clases para todos</h3>
+              <p>Desde niños hasta adultos, tenemos programas adaptados a todos los niveles.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="queSomos__card">
+            <img src="assets/img/slide3.jpg" alt="Experiencia">
+            <div class="queSomos__text">
+              <h3>Más de 25 años de experiencia</h3>
+              <p>Nuestros instructores certificados garantizan una enseñanza segura y divertida.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- NOTICIAS -->
+  <section class="noticiero">
+    <h2 data-aos="fade-up">Últimas Noticias</h2>
+    <div id="contenedor-noticias" class="noticias-grid">
+      <!-- Noticias dinámicas se inyectan con JavaScript -->
+    </div>
+    <button id="verMasNoticias" class="btn-ver-mas">Ver más noticias</button>
+  </section>
+
+  <!-- MODAL NOTICIA -->
+  <div id="modalNoticia" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h3 id="modalTitulo">.</h3>
+      <p id="modalContenido"></p>
+    </div>
+  </div>
+
+  <!-- REDIRECCIONAMIENTO -->
+  <section class="redireccionamiento" id="redireccionamiento">
+    <h2>¡Explora nuestra Web!</h2>
+    <p>Explora nuestro sitio y accede a todas las secciones rapidamente:</p>
+
+    <div class="grid-redireccionamiento">
+      <a href="#main" class="caja-redireccion">Inicio</a>
+      <a href="#queSomos" class="caja-redireccion">¿Quiénes Somos?</a>
+      <a href="#contenedor-noticias" class="caja-redireccion">Noticias</a>
+      <a href="galeria.html" class="caja-redireccion">Galería</a>
+      <a href="clases.html" class="caja-redireccion">Presupuesto</a>
+      <a href="contacto.html" class="caja-redireccion">Contacto</a>
+    </div>
+  </section>
+
+  <!-- FOOTER (idéntico al resto de páginas) -->
+  <footer class="footer">
+    <div class="footer__contenido">
+      <div class="footer__logo">
+        <h3>Yemayá</h3>
+        <p>Escuela de Surf desde 1998</p>
+      </div>
+
+      <div class="footer__info">
+        <p><strong>Dirección:</strong> SURF EL PALMAR, 11156, EL PALMAR DE VEJER, CÁDIZ, ESPAÑA</p>
+        <p><strong>Email:</strong> info@yemaya.es</p>
+        <p><strong>Teléfono:</strong> +34 628 59 76 99</p>
+      </div>
+
+      <div class="footer__redes">
+        <a href="https://www.facebook.com" target="_blank"><img src="assets/img/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="assets/img/x.png" alt="Twitter"></a>
+      </div>
+    </div>
+
+    <div class="footer__legal">
+      <p>&copy; 2025 Yemayá Surf. Todos los derechos reservados. | <a href="aviso-legal.html" target="_blank">Aviso legal</a></p>
+    </div>
+  </footer>
+
+  <!-- JS externals -->
+  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- T u script principal para index (index.js o main.js según tu proyecto) -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

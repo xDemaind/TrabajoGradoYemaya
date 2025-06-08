@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clases – Yemayá Surf</title>
+
+  <!-- Google Font Quicksand -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos compartidos (header, footer, variables, reset, tipografía) -->
+  <link rel="stylesheet" href="assets/css/shared.css">
+
+  <!-- Estilos específicos de clases -->
+  <link rel="stylesheet" href="assets/css/clases.css">
+</head>
+<body>
+  <!-- HEADER (idéntico al resto de páginas) -->
+  <header class="fixed-header">
+    <img src="assets/img/SurfLogo.png" alt="Logo Yemayá" class="logo__header">
+    <h2 class="titulo__header"><strong>YEMAYÁ</strong></h2>
+    <nav>
+      <ul>
+        <li class="header-item"><a href="index.html">Inicio</a></li>
+        <li class="header-item"><a href="galeria.html">Galería</a></li>
+        <li class="header-item"><a href="clases.html" class="activo">Clases</a></li>
+        <li class="header-item"><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section id="clases-seccion">
+      <div class="container">
+        <h1 class="titulo">Empieza tus clases de Surf!</h1>
+        <p class="subtitulo">
+          Completa el siguiente formulario y obtén tu presupuesto al instante.
+        </p>
+
+        <form id="form-presupuesto" novalidate>
+          <!-- DATOS DE CONTACTO -->
+          <fieldset class="fieldset-datos">
+            <legend>Datos de contacto</legend>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="nombre">Nombre<span class="required">*</span></label>
+                <input type="text" id="nombre" name="nombre" maxlength="15" placeholder="Tu nombre" required />
+                <small class="error-msg" id="error-nombre"></small>
+              </div>
+              <div class="form-group">
+                <label for="apellidos">Apellidos<span class="required">*</span></label>
+                <input type="text" id="apellidos" name="apellidos" maxlength="40" placeholder="Tus apellidos" required />
+                <small class="error-msg" id="error-apellidos"></small>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono<span class="required">*</span></label>
+                <input type="tel" id="telefono" name="telefono" pattern="\d{1,9}" maxlength="9" placeholder="600123456" required />
+                <small class="error-msg" id="error-telefono"></small>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico<span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required />
+                <small class="error-msg" id="error-email"></small>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- CLASES/CÁLCULO -->
+          <fieldset class="fieldset-presupuesto">
+            <legend>Clases</legend>
+            <div class="form-grid">
+              <!-- SERVICIO -->
+              <div class="form-group full-width">
+                <label>Tipo de clase<span class="required">*</span></label>
+                <div class="radio-group">
+                  <label><input type="radio" name="producto" value="particular" data-precio="100" required /> Clase particular (€100)</label>
+                  <label><input type="radio" name="producto" value="grupo-pequeno" data-precio="60" /> Clase en grupo pequeño (6 pers máx) (€60)</label>
+                  <label><input type="radio" name="producto" value="grupo-grande" data-precio="30" /> Clase en grupo grande (12 pers máx) (€30)</label>
+                </div>
+                <small class="error-msg" id="error-producto"></small>
+              </div>
+
+              <!-- DURACIÓN -->
+              <div class="form-group">
+                <label for="plazo">Duración<span class="required">*</span></label>
+                <div style="display:flex; gap:10px; align-items:center;">
+                  <input type="number" id="plazo" name="plazo" min="1" placeholder="Ej. 5" required style="flex:1;" />
+                  <select id="unidad-plazo" name="unidad-plazo" required>
+                    <option value="" disabled selected>Unid.</option>
+                    <option value="dias">Días</option>
+                    <option value="meses">Meses</option>
+                  </select>
+                </div>
+                <small class="error-msg" id="error-plazo"></small>
+              </div>
+
+              <!-- EXTRAS -->
+              <div class="form-group full-width">
+                <label>Extras (cada uno añade coste)</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="extras" value="tabla-neopreno" data-precio="25" /> Alquiler tabla + neopreno (€25)</label>
+                  <label><input type="checkbox" name="extras" value="tabla" data-precio="20" /> Alquiler tabla (€20)</label>
+                  <label><input type="checkbox" name="extras" value="neopreno" data-precio="10" /> Alquiler neopreno (€10)</label>
+                </div>
+                <small class="error-msg" id="error-extras"></small>
+              </div>
+
+              <!-- RESULTADO -->
+              <div class="form-group full-width">
+                <label for="presupuesto-final">Precio estimado</label>
+                <input type="text" id="presupuesto-final" name="presupuesto-final" readonly placeholder="€0.00" />
+                <small class="info-msg">— Se actualiza automáticamente.</small>
+                <small class="info-msg" id="descuento-info">Descuento aplicado: 0% (-€0.00)</small>
+              </div>
+
+              <!-- CONDICIONES -->
+              <div class="form-group full-width">
+                <label class="condiciones-label">
+                  <input type="checkbox" id="condiciones" name="condiciones" required /> He leído y acepto las <a href="terminos.html" target="_blank">condiciones de privacidad</a><span class="required">*</span>
+                </label>
+                <small class="error-msg" id="error-condiciones"></small>
+              </div>
+            </div>
+
+            <!-- BOTONES: ENVIAR y RESETEAR -->
+<div class="submit-wrapper">
+  <!-- Antes: <button type="submit" class="btn-enviar">Enviar</button> -->
+  <button type="submit" id="btn-enviar" class="btn-enviar" disabled>Enviar</button>
+  <button type="reset" class="btn-reset">Cancelar</button>
+</div>
+
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (idéntico al resto de páginas) -->
+  <footer class="footer">
+    <div class="footer__contenido">
+      <div class="footer__logo">
+        <h3>Yemayá</h3>
+        <p>Escuela de Surf desde 1998</p>
+      </div>
+      <div class="footer__info">
+        <p><strong>Dirección:</strong> Playa del Faro, Cádiz, España</p>
+        <p><strong>Email:</strong> contacto@yemaya.es</p>
+        <p><strong>Teléfono:</strong> +34 600 123 456</p>
+      </div>
+      <div class="footer__redes">
+        <a href="https://www.facebook.com" target="_blank"><img src="assets/img/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="assets/img/x.png" alt="Twitter"></a>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <p>&copy; 2025 Yemayá Surf. Todos los derechos reservados. | <a href="aviso-legal.html">Aviso legal</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript de clases -->
+  <script src="assets/js/clases.js"></script>
+</body>
+</html>

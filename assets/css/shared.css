@@ -1,0 +1,180 @@
+/* =============================
+   shared.css
+   Estilos compartidos por todas las páginas:
+   - Reset básico
+   - Variables de color y tipografía
+   - Body general
+   - Header fijo
+   - Footer
+============================= */
+
+/* =============================
+   VARIABLES DE COLOR Y FUENTE
+============================= */
+:root {
+  --color-fondo: #FFF4E0;
+  --color-principal: #FF6B6B;
+  --color-secundario: #40C9A2;
+  --color-texto: #2D2D2D;
+  --color-header: #FFE0A8;
+  --color-footer: #E1B382;
+  --color-hover: #FFA07A;
+}
+
+/* =============================
+   RESET BÁSICO
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================
+   BODY y TIPOGRAFÍA GLOBAL
+============================= */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =============================
+   HEADER FIJO
+   (idéntico en todas las páginas)
+============================= */
+.fixed-header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-header);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.fixed-header img.logo__header {
+  width: 50px;
+  /* Ajusta este valor si tu logo tiene otro tamaño */
+}
+
+.fixed-header .titulo__header {
+  font-size: 1.8em;
+  color: var(--color-texto);
+}
+
+.fixed-header ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.fixed-header a {
+  text-decoration: none;
+  color: var(--color-texto);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.fixed-header a:hover,
+.fixed-header a.activo {
+  background-color: var(--color-hover);
+}
+
+/* =============================
+   FOOTER
+   (idéntico en todas las páginas)
+============================= */
+.footer {
+  background-color: var(--color-footer);
+  color: var(--color-texto);
+  padding: 40px 20px 10px 20px;
+  font-size: 0.9em;
+}
+
+.footer__contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+}
+
+.footer__logo h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.footer__logo p {
+  font-size: 0.9em;
+}
+
+.footer__info p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.footer__redes a img {
+  width: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer__redes a img:hover {
+  transform: scale(1.2);
+}
+
+.footer__legal {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  font-size: 0.8em;
+}
+
+/* =============================
+   MEDIA QUERIES PARA HEADER/FOOTER y TIPOGRAFÍA
+============================= */
+@media (max-width: 768px) {
+  .fixed-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fixed-header nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .fixed-header nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer__contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__info,
+  .footer__redes {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .grid-redireccionamiento {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo__header {
+    font-size: 1.6em;
+  }
+}

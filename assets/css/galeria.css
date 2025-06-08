@@ -1,0 +1,80 @@
+/* galeria.css */
+
+/* =============================
+   0. Centrar título de galería
+   ============================= */
+#galeria-wrapper .titulo {
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Quicksand', sans-serif;
+  color: var(--color-primario);
+}
+
+/* =============================
+   1. Contenedor principal de Swiper
+   ============================= */
+.swiper {
+  width: 100%;           /* Ocupa todo el ancho disponible */
+  max-width: 1000px;     /* Ajusta el ancho máximo según diseño */
+  margin: 40px auto;     /* Centrado y separación superior */
+  box-sizing: border-box;
+  padding: 0 20px;       /* Pequeño padding lateral para móviles */
+}
+
+/* =============================
+   2. Cada slide: altura dinámica y recorte de contenido
+   ============================= */
+.swiper-slide {
+  width: auto;           /* Permite que varias slides se vean si hay espacio */
+  height: 300px;         /* Altura inicial; ajusta en responsivo */
+  display: flex;
+  align-items: center;   /* Centrar verticalmente la imagen */
+  justify-content: center; /* Centrar horizontalmente la imagen */
+  overflow: hidden;      /* Recorta cualquier parte de la imagen que sobresalga */
+  background-color: #f5f5f5; /* Fondo neutro si la imagen no llena todo */
+  border-radius: 8px;
+}
+
+/* =============================
+   3. La imagen dentro de la slide: adaptar sin deformar con contain y limitar tamaño
+   ============================= */
+.swiper-slide img {
+  max-width: 100%;       /* No sobrepasar el ancho del contenedor */
+  max-height: 100%;      /* No sobrepasar la altura del contenedor */
+  object-fit: contain;   /* Escala la imagen completa sin recortar, manteniendo proporción */
+  border-radius: 4px;
+}
+
+/* =============================
+   4. Paginación y botones personalizados
+   ============================= */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-primario); /* Usa tu variable de color primario */
+}
+.swiper-pagination-bullet {
+  background: var(--color-secundario);
+  opacity: 0.7;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* =============================
+   5. Adaptaciones responsivas para móviles/tablets
+   ============================= */
+@media (max-width: 992px) {
+  .swiper-slide {
+    height: 250px;       /* Reducir altura en pantallas medianas */
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper-slide {
+    height: 180px;       /* Altura menor en móviles */
+  }
+  .swiper {
+    padding: 0 10px;
+  }
+}
+
