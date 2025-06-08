@@ -1,4 +1,4 @@
-/* clases.css */
+/* presupuesto.css */
 
 /* =============================
    1. Variables globales y "reset" básico
@@ -29,12 +29,12 @@ body {
 /* =============================
    2. Contenedor principal de sección
    ============================= */
-#clases-seccion {
+#presupuesto-seccion {
   padding: 60px 20px;
   background-color: var(--color-fondo);
 }
 
-#clases-seccion .container {
+#presupuesto-seccion .container {
   max-width: 900px;
   margin: 0 auto;
 }
@@ -42,14 +42,14 @@ body {
 /* =============================
    3. Título y subtítulo
    ============================= */
-#clases-seccion .titulo {
+#presupuesto-seccion .titulo {
   text-align: center;
   font-size: 2rem;
   color: var(--color-primario);
   margin-bottom: 10px;
 }
 
-#clases-seccion .subtitulo {
+#presupuesto-seccion .subtitulo {
   text-align: center;
   font-size: 1rem;
   color: var(--texto-secundario);
@@ -191,7 +191,7 @@ label {
    9. Adaptaciones responsivas
    ============================= */
 @media (max-width: 768px) {
-  #clases-seccion {
+  #presupuesto-seccion {
     padding: 40px 15px;
   }
 

@@ -1,4 +1,4 @@
-// assets/js/clases.js
+// assets/js/presupuesto.js
 
 // Referencias a elementos del DOM
 const form           = document.getElementById('form-presupuesto');
