@@ -1,6 +1,6 @@
 // galeria.js
 
-fetch('assets/data/imagenes.json')
+fetch('/assets/data/imagenes.json')
   .then(response => response.json())
   .then(data => {
     const contenedor = document.getElementById("galeria-wrapper");
